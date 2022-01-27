@@ -3,7 +3,8 @@
 /.vscode
 /real_time_data
 /test_folder
-/Azure Function*
 *.exe
 test.py
 local.settings.json
+real_time_prod_data.py
+weather_data.py
