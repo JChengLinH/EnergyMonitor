@@ -71,7 +71,7 @@ class RealTimePlot():
         fig.update_layout(xaxis_range=[datetime.strptime(today, "%Y-%m-%d %H:%M:%S"), datetime.strptime(tomorrow, "%Y-%m-%d %H:%M:%S")])
         fig.update_layout(hovermode="x unified")
         fig.update_layout(title={
-        'text': "Finland Energy Production Composition Over Time",
+        'text': "FI Energy Production Composition Over Time",
         'y':0.97,
         'x':0.5,
         'xanchor': 'center',
@@ -102,7 +102,7 @@ class RealTimePlot():
         fig.update_traces(hoverinfo='label+value', textinfo='percent', textfont_size=12,
                         marker=dict(colors=self.fi_colors, line=dict(color='#F8F8FF', width=2)))
         fig.update_layout(title={
-        'text': "Finland Current Energy Production Composition",
+        'text': "FI Current Energy Production Composition",
         'y':0.9,
         'x':0.5,
         'xanchor': 'center',
@@ -159,7 +159,6 @@ class RealTimePlot():
 
     def swe_pie_chart(self):
         latest_timestamp = list(self.swe_data)[-1]
-        print(latest_timestamp)
         labels = [key for key in self.swe_data[latest_timestamp] if key != "consumption"]
         values = [self.swe_data[latest_timestamp][key] for key in self.swe_data[latest_timestamp] if key != "consumption"]
 
@@ -263,13 +262,12 @@ class RealTimePlot():
         n = 0
         colors = self.cons_prod_colors[:]
         column_names = list(df.columns)[-2:len(df.columns)]
-        print(colors)
+
         if df.consumption.sum() < df.total_prod.sum():
 
             column_names.reverse()
             colors.reverse()
 
-        print(column_names, colors)
         for column_name in column_names:
             today = date.today().strftime("%Y-%m-%d %H:%M:%S")
             tomorrow = (date.today() + timedelta(days=1)).strftime("%Y-%m-%d %H:%M:%S")
