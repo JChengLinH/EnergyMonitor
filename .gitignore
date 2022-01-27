@@ -1,0 +1,9 @@
+*.env
+/*.cache
+/.vscode
+/real_time_data
+/test_folder
+/Azure Function*
+*.exe
+test.py
+local.settings.json
