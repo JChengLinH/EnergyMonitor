@@ -1,6 +1,5 @@
 # EnergyMonitor
 The EnergyMonitor a data pipeline which collects the current energy production data as well as electricity spot price in Sweden and Finland.
-
 ## What Energy Monitor Does
 The EnergyMonitor allows users to check the current electricity production composition, total electricity production, total electricity consumption and the electricity spot price of Sweden and Finland of the current day. In addition, weather condition of selected cities in the previously mentioned countries are displayed.
 
