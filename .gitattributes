@@ -4,3 +4,6 @@
 *.js linguist-detectable=true
 *.html linguist-detectable=true
 *.xml linguist-detectable=true 
+*.ps1 linguist-detectable=false
+*.h linguist-detectable=false
+*.bat linguist-detectable=false
