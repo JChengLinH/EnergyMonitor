@@ -21,7 +21,7 @@ class RealTimePlot():
         price_filename_fi = f"fi_elprice_{self.today}.json"
         price_filename_swe = f"swe_elprice_{self.today}.json"
 
-        load_dotenv("creds.env")
+        load_dotenv("Flask/creds.env")
         price_container_name = "el-price"
         container_name = "real-time-prod-data"
         storage_url = os.getenv("SAS_URL")
@@ -308,3 +308,4 @@ class RealTimePlot():
 
         chart_div_string = pyo.offline.plot(fig, include_plotlyjs=False, output_type='div')
         return chart_div_string
+RealTimePlot()
